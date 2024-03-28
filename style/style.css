@@ -18,6 +18,7 @@
 
 body {
   background: var(--second-color);
+  color: var(--text-color);
 }
 
 /******************************************/
@@ -163,7 +164,6 @@ section {
 .about__paragr {
   line-height: 1.4;
   font-size: 20px;
-  color: var(--text-color);
 }
 .about__img {
   height: 100vh;
@@ -173,4 +173,27 @@ section {
   display: block;
   width: 90%;
   height: 95%;
+}
+
+/*--=BENEFITS=--*/
+.benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: auto;
+}
+.benefits__item {
+  list-style: none;
+  width: calc(33.333% - 27px);
+}
+.benefits__num {
+  display: inline-block;
+  font-size: 60px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pr-color);
+}
+.benefits__paragr {
+  font-size: 20px;
 }
