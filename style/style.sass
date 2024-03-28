@@ -192,3 +192,37 @@ section
 
 	&__paragr
 		font-size: 20px
+		margin-top: 10px
+
+
+/*--=WORK=--*/
+.work
+	padding-top: 150px
+
+	&__box 
+		display: flex
+		flex-wrap: wrap
+		row-gap: 100px
+		justify-content: space-between
+		padding: 0 120px
+	
+	&__item
+		position: relative
+		width: calc(50% - 60px)
+
+		&-img
+			overflow: hidden
+			border-top-right-radius: 10%
+			border-bottom-left-radius: 10%
+			img
+				display: block
+				height: 1024px
+				object-fit: cover
+		
+		&-num
+			position: absolute
+			display: inline-block
+			font-size: 70px
+			color: var(--pr-color)
+			mix-blend-mode: difference
+			z-index: 2
