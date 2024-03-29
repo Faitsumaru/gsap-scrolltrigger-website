@@ -1,0 +1,88 @@
+@media screen and (min-width: 2250px)
+    section
+        padding-left: 300px
+        padding-right: 300px
+
+    .about
+        &__img
+            img
+                height: auto
+                width: 75%
+
+    .work
+        &__item
+            width: fit-content
+            margin: 0 auto
+            &-img
+                display: flex
+                justify-content: center
+
+
+@media screen and (max-width: 1600px)
+    .about
+        &__img
+            height: 80vh
+
+    .work
+        &__item
+            &-img
+                img
+                    height: 750px
+                    width: 100%
+
+
+@media screen and (max-width: 1150px)
+    .header
+        &__title
+            font-size: 70px
+            text-align: left
+        &__img
+            width: 55%
+            clip-path: polygon(100% 12%, -5% -5%, 20% 100%, 80% 100%)
+        &__ribbon-text
+            font-size: 25px
+
+    .section-title
+        font-size: 45px
+        margin-bottom: 75px
+    
+    p
+        font-size: 14px !important
+        line-height: 25px !important
+    
+    .about
+        &__img
+            height: 60vh
+
+    .benefits
+        &__item
+            width: calc(46% - 20px)
+            text-align: center
+        &__num
+            font-size: 40px
+
+    .work
+        &__box
+            display: grid
+            justify-content: center
+            row-gap: 40px
+            padding: 0
+        &__item
+            width: 100%
+            &-num
+                font-size: 35px
+                left: 60px
+            &-img
+                img
+                    width: 80%
+                    margin: 0 auto
+    
+    .services
+        &__item
+            &-text
+                font-size: 20px
+    
+    .footer
+        height: 50vh
+        &__box
+            font-size: 20px
