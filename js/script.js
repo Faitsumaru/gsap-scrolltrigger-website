@@ -40,4 +40,66 @@ document.addEventListener('DOMContentLoaded', () => {
             scrub: 1.9
         })
     }) 
+
+
+    //header animations:
+    let headerANM = () => {
+        gsap.to('.header__title-parallax', {
+            scrollTrigger: {
+                trigger: ".header",
+                start: 'top top',
+                scrub: 1.9
+            },
+            yPercent: -150
+        })
+
+        gsap.to('.header__title-stroke', {
+            scrollTrigger: {
+                trigger: '.header',
+                start: 'top top',
+                scrub: 1.9
+            },
+            xPercent: 50
+        })
+
+        gsap.to('.header__img', {
+            scrollTrigger: {
+                trigger: '.header',
+                start: 'top top',
+                scrub: 1.9
+            },
+            xPercent: 30
+        })
+
+        gsap.to('.header__img img', {
+            scrollTrigger: {
+                trigger: '.header',
+                start: 'top top',
+                scrub: 1.9
+            },
+            scale: 1.3,
+            rotate: 30
+        })
+
+        gsap.to('.header__ribbon-box', {
+            scrollTrigger: {
+                trigger: 'header',
+                start: 'top top',
+                scrub: 1.9
+            },
+            xPercent: -50
+        })
+
+        gsap.to('.header__ribbon-star', {
+            scrollTrigger: {
+                trigger: 'header',
+                start: 'top top',
+                scrub: 1.9
+            },
+            rotate: -720
+        })
+    }
+    headerANM();
+
+
 })
