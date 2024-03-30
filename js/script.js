@@ -26,5 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'expo.out'
     }, "-=1.5")
 
-
+    
+    const gsapSQUARE = gsap.utils.toArray('.section-title__square');
+    gsapSQUARE.forEach((gsapKey, item) => {
+        const rotate = gsap.from(gsapKey, 3, {
+            rotation: 720,
+            scale: 2.5
+        });
+        ScrollTrigger.create({
+            trigger: gsapKey,
+            animation: rotate,
+            start: 'top bottom',
+            scrub: 1.9
+        })
+    }) 
 })
