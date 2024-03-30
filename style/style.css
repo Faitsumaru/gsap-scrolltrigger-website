@@ -26,6 +26,10 @@ section {
   padding: 150px 0 50px 0;
 }
 
+.char {
+  display: inline-block;
+}
+
 .wrapper {
   width: 100%;
   height: auto;
