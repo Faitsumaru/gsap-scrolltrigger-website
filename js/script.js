@@ -134,4 +134,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     aboutANM();
 
+
+    //benefits animations:
+    let benefitsANM = () => {
+        gsap.from('.benefits__num', {
+            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '.benefits__list',
+                start: 'top bottom',
+                scrub: 1.9
+            }
+        })
+
+        gsap.fromTo('.benefits__paragr', {
+            opacity: 0.25,
+            rotate: 10
+        },
+        {
+            scrollTrigger: {
+                trigger: '.work',
+                start: 'top bottom',
+                scrub: 1.9,
+            },
+            opacity: 1,
+            rotate: -10
+        })
+    }
+    benefitsANM();
+
 })
