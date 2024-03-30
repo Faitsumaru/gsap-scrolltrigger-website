@@ -102,4 +102,36 @@ document.addEventListener('DOMContentLoaded', () => {
     headerANM();
 
 
+    //about animations:
+    let aboutANM = () => {
+        gsap.from('.about__img', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top bottom',
+                scrub: 1.9
+            },
+            yPercent: 80
+        })
+
+        gsap.from('.about__img img', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top bottom',
+                scrub: 1.9
+            },
+            scale: 1.6
+        })
+
+        gsap.from('.about__text', {
+            scrollTrigger: {
+                trigger: '.about__box',
+                start: 'top bottom',
+                scrub: 1.9
+            },
+            yPercent: 50,
+            xPercent: 25
+        })
+    }
+    aboutANM();
+
 })
