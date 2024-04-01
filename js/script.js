@@ -162,4 +162,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     benefitsANM();
 
+
+    //portfolio animations
+    let portfolioANM = () => {
+        gsap.from('.work__item .work__item-num', {
+            y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '.work',
+                start: 'top bottom',
+                scrub: 1.9
+            }
+        })
+        
+        gsap.from('.work__item-img img', {
+            scrollTrigger: {
+                trigger: '.work__box',
+                start: 'top bottom',
+                scrub: 1.9
+            },
+            scale: 1.6
+        })
+    }
+    portfolioANM();
+
 })
