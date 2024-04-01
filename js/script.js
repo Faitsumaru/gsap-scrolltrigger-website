@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 0,
         yPercent: 100,
         ease: 'expo.out'
-    }, "-=1.5")
+    }, "-=1.2")
 
     
     const gsapSQUARE = gsap.utils.toArray('.section-title__square');
@@ -128,8 +128,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: 'top bottom',
                 scrub: 1.9
             },
-            yPercent: 50,
+            yPercent: 0,
             xPercent: 25
+        })
+
+        gsap.to('.about__text', {
+            scrollTrigger: {
+                trigger: '.about__box',
+                start: 'top bottom',
+                scrub: 1.9
+            },
+            yPercent: 50
         })
     }
     aboutANM();
