@@ -193,20 +193,20 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: '.services__list',
                 start: 'top bottom',
-                scrub: 3
+                scrub: 1.9
             }
         })
 
         gsap.fromTo('.services__item-text', {
             opacity: 0.5,
-            rotate: 50,
+            rotate: 20,
             scale: .5
         },
         {
             scrollTrigger: {
                 trigger: '.services__list',
                 start: 'top bottom',
-                scrub: 3,
+                scrub: 1.9,
             },
             opacity: 1,
             rotate: 0,
@@ -214,5 +214,22 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
     servicesANM();
+
+
+    //footer animations
+    let footerANM = () => {
+        gsap.from('.footer__box span', {
+            y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '.footer',
+                start: 'top bottom',
+                end: 'bottom bottom',
+                scrub: 1.9
+            },
+            opacity: 0,
+            scale: 5
+        })
+    }
+    footerANM();
 
 })
