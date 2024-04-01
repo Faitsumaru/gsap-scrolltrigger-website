@@ -185,4 +185,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     portfolioANM();
 
+
+    //services animations
+    let servicesANM = () => {
+        gsap.from('.services__item__arrow', {
+            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '.services__list',
+                start: 'top bottom',
+                scrub: 3
+            }
+        })
+
+        gsap.fromTo('.services__item-text', {
+            opacity: 0.5,
+            rotate: 50,
+            scale: .5
+        },
+        {
+            scrollTrigger: {
+                trigger: '.services__list',
+                start: 'top bottom',
+                scrub: 3,
+            },
+            opacity: 1,
+            rotate: 0,
+            scale: 1
+        })
+    }
+    servicesANM();
+
 })
